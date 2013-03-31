@@ -1,0 +1,129 @@
+@-ms-viewport
+{
+	width: 768px;
+}
+
+@-webkit-viewport
+{
+	width: 768px;
+}
+
+@-o-viewport
+{
+	width: 768px;
+}
+
+@-moz-viewport
+{
+	width: 768px;
+}
+
+@viewport
+{
+	width: 768px;
+}
+
+html
+{
+	background: #7F7F7F url("../../images/wood_pattern.png") repeat center center scroll;
+}
+
+#page
+{
+	z-index: 1;
+	width: 768px;
+	min-height: 397px;
+	border-style: none;
+	border-color: #000000;
+	padding-bottom: 627px;
+	background: #FFFFFF url("../../images/wood_pattern.png") repeat center center;
+}
+
+#pu163
+{
+	z-index: 2;
+	width: 0.01px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 15px;
+	left: 79px;
+}
+
+#u163
+{
+	z-index: 0;
+	width: 561px;
+	opacity: 0.5;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=50);
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+}
+
+._u163.f3s_top
+{
+	width: 561px;
+	background-image: url("../../images/u163-sprite.png");
+	overflow: hidden;
+	height: 21px;
+	background-position: left top;
+}
+
+._u163.f3s_mid
+{
+	background-image: url("../../images/u163-sprite.png");
+	overflow: visible;
+	background-position: -561px top;
+	width: 561px;
+	height: 57px;
+}
+
+._u163.f3s_bot
+{
+	width: 561px;
+	background-image: url("../../images/u163-sprite.png");
+	overflow: visible;
+	height: 20px;
+	background-position: -1122px top;
+}
+
+#pu146-4
+{
+	width: 0.01px;
+	position: relative;
+	left: 11px;
+	padding-top: 23px;
+	z-index: 2;
+	padding-bottom: 14px;
+}
+
+#u146-4
+{
+	z-index: 3;
+	display: block;
+	vertical-align: top;
+	position: relative;
+	width: 540px;
+	margin-right: -10000px;
+}
+
+#u168
+{
+	z-index: 7;
+	width: 192px;
+	min-height: 269px;
+	border-style: none;
+	border-color: transparent;
+	background-color: transparent;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 128px;
+	left: 224px;
+}
+
+#page .verticalspacer
+{
+	clear: both;
+}
+

@@ -1,0 +1,21 @@
+<manifest alg="2" build="8" opt="false">
+  <folder name="css">
+    <file name="site_global.css" crc="89652228"/>
+    <file name="master_a-master.css" crc="3868066782" ref="index:specific-film"/>
+    <file name="index.css" crc="269171303" ref="index"/>
+    <file name="specific-film.css" crc="4112910204" ref="specific-film"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:specific-film"/>
+    <file name="museutils.js" crc="4076886207" ref="index:specific-film"/>
+    <file name="pie.js" crc="4067523484" ref="index:specific-film"/>
+    <file name="jquery.tobrowserwidth.js" crc="301098119" ref="index"/>
+    <file name="jquery.watch.js" crc="4068933136" ref="index:specific-film"/>
+  </folder>
+  <folder name="images">
+    <file name="untitled-1-recovered.png" crc="4236524860" ref="index:specific-film"/>
+    <file name="batman.jpg" crc="225972611" ref="index:specific-film"/>
+  </folder>
+  <file name="index.html" crc="127531854" mt="1364532918052"/>
+  <file name="specific-film.html" crc="420281716" mt="1364533081144"/>
+</manifest>

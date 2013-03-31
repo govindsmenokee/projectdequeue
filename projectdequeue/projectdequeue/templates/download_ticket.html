@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  		<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+	 	<meta name="generator" content="4.1.8.204"/>
+  		<title>specific film</title>
+  		<meta name="viewport" content="width=380"/>
+  	
+		<!-- CSS -->
+		  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/site_global.css?89652228"/>
+  		  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/master_a-master.css?3868066782"/>
+  		  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/specific-film.css?4112910204"/>
+		  
+  	
+		<!-- Other scripts -->
+  			<script type="text/javascript">
+   			document.documentElement.className += ' js';
+			</script>
+   </head>
+
+
+
+<body>
+
+
+<div class="clearfix" id="page"><!-- column -->
+	<div class="clearfix colelem" id="pu94"><!-- group -->
+ 		<div class="clearfix grpelem" id="u132-4"><!-- content -->
+      		<p><h1><font size="6"><b>{{ film.film_name }}</b></h1></p><br/>
+		<p><h1><font size="3" face="arial" color="RED"><p><b>The transaction is complete. {{ credits }} credits were deducted from your account. You have {{ remain }} credits left in your account.</b></p></h1></p><br/>
+		<p><h1><font size="6" face="arial" color="brown"><marquee>The show starts at:<p><b>{{ film.show_timing }}</b></p></marquee></h1></p>
+		<p><h1><font size="6" face="arial" color="#2c2c2c">IN HALL:<p><b>NO.{{ film.hall_id }}</b></p></h1></p>
+     	</div>
+	</div>
+	<div class="clearfix colelem" id="pu94"><!-- group -->
+		<div class="clearfix grpelem" id="u132-4"><!-- content -->
+	   		<font size="5" face="arial" color="brown"><strong><b><i><u><blink>GET YOUR TICKET HERE:</blink></u></i></b></strong></font>
+    	 </div>
+	</div>
+	<div class="clearfix colelem" id="pu149"><!-- group -->
+	
+	<div class="grpelem" id="u149-4"><!-- image -->
+		<img src="http://chart.apis.google.com/chart?cht=qr&chs=300x300&chl={{user}}{{date}}{{amount}}"></a>
+		<a href="http://chart.apis.google.com/chart?cht=qr&chs=300x300&chl=sumod" download="{{filmid}}-{{user}}-{{date}}-{{amount}}.jpg"><img src="/film_images/download_button.jpg" width="300" height="70" /></a>
+	</div>		
+	</div>		
+
+    
+		
+</body>
+
+
+
+<!-- JS includes -->
+	<script type="text/javascript">
+   		if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+	</script>
+  	<script type="text/javascript">
+   		window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+	</script>
+  	<script src="scripts/museutils.js?4076886207" type="text/javascript"></script>
+  	<script src="scripts/jquery.watch.js?4068933136" type="text/javascript"></script>
+  
+<!-- Other scripts -->
+	<script type="text/javascript">
+		Muse.Utils.addSelectorFn('body', Muse.Utils.transformMarkupToFixBrowserProblemsPreInit);/* body */
+		Muse.Utils.addSelectorFn('body', Muse.Utils.prepHyperlinks); /* body */
+		Muse.Utils.addSelectorFn('body', function() { Muse.Utils.fullPage('#page'); }); /* 100% height page */
+		Muse.Utils.addSelectorFn('body', Muse.Utils.showWidgetsWhenReady);/* body */
+		Muse.Utils.addSelectorFn('body', Muse.Utils.transformMarkupToFixBrowserProblems);/* body */
+	</script>
+  </body>
+</html>
+

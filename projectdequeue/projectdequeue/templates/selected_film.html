@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  		<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+	 	<meta name="generator" content="4.1.8.204"/>
+  		<title>specific film</title>
+  		<meta name="viewport" content="width=380"/>
+  	
+		<!-- CSS -->
+		  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/site_global.css?89652228"/>
+  		  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/master_a-master.css?3868066782"/>
+  		  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/specific-film.css?4112910204"/>
+  	
+		<!-- Other scripts -->
+  			<script type="text/javascript">
+   			document.documentElement.className += ' js';
+			</script>
+   </head>
+ 	<body>
+
+  	<div class="clearfix" id="page"><!-- column -->
+   		<div class="position_content" id="page_position_content">
+    		<div class="clearfix colelem" id="pu94"><!-- group -->
+     			<div class="grpelem" id="u94"><!-- image -->
+      				<img class="block" id="u94_img" src="" alt="" width="966" height="503"/>
+     			</div>
+     		<div class="clearfix grpelem" id="u132-4"><!-- content -->
+      			<p><h1><b>{{ film.film_name }}</b></h1></p>
+     		</div>
+     		<div class="grpelem" id="u133"><!-- image -->
+      			<img class="block" id="u133_img" src="/film_images/{{ film.film_image }}" alt="" width="184" height="273"/>
+     		</div>
+     		<div class="clearfix grpelem" id="u137-4"><!-- content -->
+      			<p>MOVIE TITLE : <p><b>{{ film.film_name }}</b></p></p>
+     		</div>
+     		<div class="clearfix grpelem" id="u138-4"><!-- content -->
+      			<p>STARTS AT : <p><b>{{ film.show_timing }}</b></p></p>
+     		</div>
+     		<div class="clearfix grpelem" id="u139-4"><!-- content -->
+     			 <p>CHARGE:<p><b>Rs.{{film.ticket_charge }}</b></p></p>
+     		</div>
+     		<div class="clearfix grpelem" id="u140-4"><!-- content -->
+      			<p>HALL : <p><b>{{ film.hall_id }}</b></p></p>
+     		</div>
+     		<div class="clearfix grpelem" id="u142-4"><!-- content -->
+      			<p><i>{{ film.description }}</i></p>
+     		</div>
+    	</div>
+    	<div class="clearfix colelem" id="pu149"><!-- group -->
+			
+			<form action="/buyticket?filmid={{film.film_id}}" method="post">{% csrf_token %}
+		
+				<div class="grpelem" id="u149"><!-- custom html -->	
+					<font size="2" face="arial" color="brown"><strong>Number Of Tickets</strong></font>	
+					<select name="number_of_tickets" style="width: 100px" />
+  						<option value="1">One</option>
+ 						<option value="2">Two</option>
+  						<option value="3">Three</option>
+						<option value="4">Four</option>
+					</select>
+						
+				</div>
+				<div class="grpelem" id="u147"><!-- custom html -->
+					<input style="width:100px;height:50px;" type="submit" value="PURCHASE" />
+					{% block content %}
+					{% endblock %}	
+				</div>
+				
+			</form>
+     		
+    	</div>
+		
+    	<div class="verticalspacer"></div>
+   	</div>
+  </div>
+ 
+<!-- JS includes -->
+	<script type="text/javascript">
+   		if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+	</script>
+  	<script type="text/javascript">
+   		window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+	</script>
+  	<script src="scripts/museutils.js?4076886207" type="text/javascript"></script>
+  	<script src="scripts/jquery.watch.js?4068933136" type="text/javascript"></script>
+  
+<!-- Other scripts -->
+	<script type="text/javascript">
+		Muse.Utils.addSelectorFn('body', Muse.Utils.transformMarkupToFixBrowserProblemsPreInit);/* body */
+		Muse.Utils.addSelectorFn('body', Muse.Utils.prepHyperlinks); /* body */
+		Muse.Utils.addSelectorFn('body', function() { Muse.Utils.fullPage('#page'); }); /* 100% height page */
+		Muse.Utils.addSelectorFn('body', Muse.Utils.showWidgetsWhenReady);/* body */
+		Muse.Utils.addSelectorFn('body', Muse.Utils.transformMarkupToFixBrowserProblems);/* body */
+	</script>
+  </body>
+</html>

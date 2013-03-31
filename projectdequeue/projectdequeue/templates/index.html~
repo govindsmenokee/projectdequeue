@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+ <head>
+
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="generator" content="4.1.8.204"/>
+  <title>view films</title>
+  <meta name="viewport" content="width=380"/>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/site_global.css?89652228"/>
+  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/master_a-master.css?3868066782"/>
+  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/index.css?269171303" id="pagesheet"/>
+  <!-- Other scripts -->
+  <script type="text/javascript">
+   document.documentElement.className += ' js';
+</script>
+   </head>
+ <body>
+
+  <div class="clearfix" id="page"><!-- group -->
+   <div class="grpelem" id="u94"><!-- image -->
+    <img class="block" id="u94_img" src="images/untitled-1-recovered.png" alt="" width="966" height="503"/>
+   </div>
+   <a class="nonblock nontext MuseLinkActive clearfix grpelem" id="u99-4" href="index.html"><!-- content --><p>Available Shows</p></a>
+   <div class="clearfix browser_width grpelem" id="u113"><!-- group -->
+{% if film_list %}
+		{% for film in film_list %}
+    <div class="pointer_cursor clearfix grpelem" id="u100"><!-- group -->
+     <a class="block" href="specific-film.html"></a>
+     <a class="nonblock nontext grpelem" id="u101" href="viewfilm/{{ film.slug }}/"><!-- image --><img class="block" id="u101_img" src= "/media/{{ film.film_image }}" alt="" width="148" height="219"/></a>
+     <div class="clearfix grpelem" id="pu107-4"><!-- column -->
+
+      <a class="nonblock nontext clearfix colelem" id="u107-4" href="specific-film.html"><!-- content --><p>Film Id:{{ film.film_id }}</p></a>
+      <a class="nonblock nontext clearfix colelem" id="u108-4" href="specific-film.html"><!-- content --><p>Movie Title:{{ film.film_name }}</p></a>
+      <a class="nonblock nontext clearfix colelem" id="u109-4" href="specific-film.html"><!-- content --><p></p></a>
+      <a class="nonblock nontext clearfix colelem" id="u110-4" href="specific-film.html"><!-- content --><p>User:{{ user.username }}</p></a>
+      <a class="nonblock nontext clearfix colelem" id="u111-4" href="specific-film.html"><!-- content --><p>Charge:{{ film.ticket_charge }} Rs.</p></a>
+
+     </div>
+{% endfor %}
+	{% endif %} 
+
+    </div>
+   </div>
+   <div class="clearfix browser_width grpelem" id="u114"><!-- group -->
+    <div class="pointer_cursor clearfix grpelem" id="u119"><!-- group -->
+     <a class="block" href="specific-film.html"></a>
+     <a class="nonblock nontext grpelem" id="u121" href="specific-film.html"><!-- image --><img class="block" id="u121_img" src="images/batman.jpg" alt="" width="148" height="219"/></a>
+     <div class="clearfix grpelem" id="pu120-4"><!-- column -->
+      <a class="nonblock nontext clearfix colelem" id="u120-4" href="specific-film.html"><!-- content --><p>MOVIE NAME</p></a>
+      <a class="nonblock nontext clearfix colelem" id="u117-4" href="specific-film.html"><!-- content --><p>TIMING</p></a>
+      <a class="nonblock nontext clearfix colelem" id="u115-4" href="specific-film.html"><!-- content --><p>STARTS AT</p></a>
+      <a class="nonblock nontext clearfix colelem" id="u118-4" href="specific-film.html"><!-- content --><p>HALL</p></a>
+      <a class="nonblock nontext clearfix colelem" id="u116-4" href="specific-film.html"><!-- content --><p>CHARGE</p></a>
+     </div>
+    </div>
+   </div>
+   <div class="verticalspacer"></div>
+  </div>
+  <!-- JS includes -->
+  <script type="text/javascript">
+   if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+</script>
+  <script type="text/javascript">
+   window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+</script>
+  <script src="scripts/museutils.js?4076886207" type="text/javascript"></script>
+  <script src="scripts/jquery.tobrowserwidth.js?301098119" type="text/javascript"></script>
+  <script src="scripts/jquery.watch.js?4068933136" type="text/javascript"></script>
+  <!-- Other scripts -->
+  <script type="text/javascript">
+   Muse.Utils.addSelectorFn('body', Muse.Utils.transformMarkupToFixBrowserProblemsPreInit);/* body */
+$(document).ready(function() { $('.browser_width').toBrowserWidth(); });/* browser width elements */
+Muse.Utils.addSelectorFn('body', Muse.Utils.prepHyperlinks); /* body */
+Muse.Utils.addSelectorFn('body', function() { Muse.Utils.fullPage('#page'); }); /* 100% height page */
+Muse.Utils.addSelectorFn('body', Muse.Utils.showWidgetsWhenReady);/* body */
+Muse.Utils.addSelectorFn('body', Muse.Utils.transformMarkupToFixBrowserProblems);/* body */
+
+</script>
+   </body>
+</html>

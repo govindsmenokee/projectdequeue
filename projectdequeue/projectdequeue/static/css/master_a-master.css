@@ -1,0 +1,8 @@
+#u94
+{
+	opacity: 0.3;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity=30);
+	position: relative;
+}
+

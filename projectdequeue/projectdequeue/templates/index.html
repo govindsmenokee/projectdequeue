@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<body>
+	<section class="loginform cf">
+	<form name="login" action="/" method="post" accept-charset="utf-8">{% csrf_token %}
+		<ul>
+		<li>
+			<label for="usermail">Username</label>
+			<input type="text" name="uname" placeholder="username" required>
+		</li>
+		<li>
+			<label for="password">Password</label>
+			<input type="password" name="passwd" placeholder="password" required></li>
+		<li>
+			<input type="submit" value="Login">
+		</li>
+		<li>
+			<div class=error>
+	    	{% if  error  %}
+		    	<h6 style="color:red"><b>Username &  Password doesn't match!</b></h6>
+			{% endif %}
+    		</div>
+		</li>
+		</ul>
+	</form>
+	</section>
+</body>
+{% endblock %}
+

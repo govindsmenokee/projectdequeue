@@ -1,0 +1,43 @@
+{% extends "base.html" %}	
+{% block content %}
+    <title>Login</title>
+    <div class=hero-unit>
+	<h1>Project Dequeue
+	<small><h6>Payment Simplified.</h6></small></h1>
+    <br><br>
+	<div class=center>
+	<h3>Sign In</h3>
+    <table>
+	<form action=/ method=post>
+		{% csrf_token %}
+        <tr>
+    		<td>Username</td>
+            <td><input  name=uname type=text></td>
+        </tr>
+        <tr>
+    		<td>Password</td>
+            <td><input  name=passwd type=password></td>
+        </tr>
+        <tr>
+            <td>
+    		<div class=error>
+	    		{% if  error  %}
+		    	<h5 style="color:red"><b>Username &  Password doesn't match!</b></h5>
+			    {% endif %}
+    		</div>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+	    	<td><input type=submit Value=Login ></td>
+        </tr>
+        <tr>
+            <td>
+	    		<a href=/login/forgot style=font-size:12px>Can't Access your account?</a>
+            </td>
+        </tr>
+        </table>
+		</form>
+	</div>
+	</div>
+{% endblock %}    

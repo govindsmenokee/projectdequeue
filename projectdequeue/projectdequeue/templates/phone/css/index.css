@@ -1,0 +1,65 @@
+@-ms-viewport
+{
+	width: 380px;
+}
+
+@-webkit-viewport
+{
+	width: 380px;
+}
+
+@-o-viewport
+{
+	width: 380px;
+}
+
+@-moz-viewport
+{
+	width: 380px;
+}
+
+@viewport
+{
+	width: 380px;
+}
+
+html
+{
+	background: #7F7F7F url("../../images/wood_pattern.png") repeat center center scroll;
+}
+
+#page
+{
+	z-index: 1;
+	width: 343px;
+	min-height: 144px;
+	border-style: none;
+	border-color: #000000;
+	padding: 12px 20px 414px 17px;
+	background: #FFFFFF url("../../images/wood_pattern.png") repeat center center;
+}
+
+#u196-4
+{
+	z-index: 2;
+	display: block;
+	vertical-align: top;
+	position: relative;
+}
+
+#u198
+{
+	z-index: 6;
+	width: 200px;
+	border-style: none;
+	border-color: transparent;
+	background-color: transparent;
+	margin-left: 31px;
+	position: relative;
+}
+
+#page .verticalspacer
+{
+	clear: both;
+}
+

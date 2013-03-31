@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<body>
+	{% if selected_film %}
+	{% for film in selected_film %}
+	<img src="/film_images/{{film.film_image}}" width="200" height="200" />
+	<table width="300%" height="200" align="left">
+		<col width="50">
+		<col width="100">
+		<col width="100">
+		<col width="50">
+		<tr height="50">		
+			<th><font allign="centre" size="5" face="verdana" color="RED"><strong>Film</strong></th></font>
+			<th><font allign="centre" size="5" face="verdana" color="RED"><strong>Ticket Charge</strong></font></th>
+			<th><font allign="centre" size="5" face="verdana" color="RED"><strong>Show Timing</strong></font></th>
+			<th><font allign="centre" size="5" face="verdana" color="RED"><strong>Hall</strong></font></th>
+		</tr>		
+		<tr>		
+			<td><font allign="centre" size="5" face="verdana" color="BLACK">{{ film.film_name }}</font></td>
+			<td><font allign="centre" size="5" face="verdana" color="BLACK">{{ film.ticket_charge }}</font></td>
+			<td><font allign="centre" size="5" face="verdana" color="BLACK">{{ film.show_timing }}</font></td>
+			<td><font allign="centre" size="5" face="verdana" color="BLACK">{{ film.hall_id }}</font></td>
+		</tr>
+	
+		<tr>
+		<td><font allign="centre" size="4" face="verdana" color="RED"><strong>Amount Payable :  {{amount}}</strong></font></td>
+		</tr>
+		<form action="/getticket?amount={{amount}}&filmid={{film.film_id}}" method="post">{% csrf_token %}
+			<tr>
+				<td><input type="submit" name="makepayment" value="MAKE PAYMENT"></a></td>
+			</tr>	
+		</form>
+	</table>
+
+	{% endfor %}
+	{% endif %}
+</body>
+{% endblock %}
+

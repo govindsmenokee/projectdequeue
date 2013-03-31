@@ -1,0 +1,10 @@
+from django.shortcuts import render_to_response
+from django.http import HttpResponse
+from django.template import RequestContext
+from film.models import Film
+from hall.models import Hall
+
+from django.views.decorators.cache import cache_control
+from django.contrib.auth.decorators import login_required,user_passes_test
+
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+ <head>
+
+  <script src="/static/scripts/museredirect.js?4285303101" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+   Muse.Redirect.redirect('desktop', 'tablet/index.html', 'phone/index.html', '');
+</script>
+  
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="generator" content="4.1.8.204"/>
+  <title>Home</title>
+  <link media="only screen and (max-device-width: 370px)" rel="alternate" href="http://dequeue.com/phone/index.html"/>
+  <link media="only screen and (max-device-width: 960px)" rel="alternate" href="http://dequeue.com/tablet/index.html"/>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}/css/site_global.css?487789990"/>
+  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}/css/master_a-master.css?254134402"/>
+  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}/css/index.css?3844673522" id="pagesheet"/>
+   <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/specific-film.css?4112910204"/>s	
+	
+
+  <!-- Other scripts -->
+  <script type="text/javascript">
+   document.documentElement.className += ' js';
+</script>
+   </head>
+
+<body>
+
+  <div class="clearfix" id="page"><!-- column -->
+   <div class="position_content" id="page_position_content">
+	
+    	<div class="clearfix colelem" id="pu94"><!-- group -->
+			<div class="clearfix grpelem" id="u132-4"><!-- content -->
+	   			<font size="5" face="arial" color="RED"><strong>Project DeQueue</strong></font>
+    	 	</div>
+		</div>
+
+		<div class="colelem" id="u100"><!-- custom html -->
+    	 <!DOCTYPE html>
+		<html>
+		<head>
+			<title>Login</title>
+			{% load staticfiles %}
+			<link rel="stylesheet" href="{{ STATIC_URL }}normalize.css">
+			<link rel="stylesheet" href="{{ STATIC_URL }}style.css">
+		</head>
+		<body>
+			<section class="loginform cf">
+			<form name="login" action="/" method="post" accept-charset="utf-8">	{% csrf_token %}
+			<ul>
+				<li>
+					<label for="usermail">Username</label>
+					<input type="text" name="uname" placeholder="username" required>
+				</li>
+				<li>
+					<label for="password">Password</label>
+					<input type="password" name="passwd" placeholder="password" required></li>
+				<li>
+					<input type="submit" value="Login">
+				</li>
+				<li>
+				<div class=error>
+	    			{% if  error  %}
+		    		<h6 style="color:red"><b>Username &  Password doesn't match!</b></h6>
+			    	{% endif %}
+    			</div>
+				</li>
+			</ul>
+			</form>
+			</section>
+<div class="clearfix colelem" id="pu94"><!-- group -->
+		</body>
+		</html>
+	</div>
+	<div class="verticalspacer"></div>
+   </div>
+</div>
+
+  
+
+  	<!-- JS includes -->
+  <script type="text/javascript">
+   if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+</script>
+  <script type="text/javascript">
+   window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+</script>
+  <script src="scripts/museutils.js?4076886207" type="text/javascript"></script>
+  <script src="scripts/jquery.watch.js?4068933136" type="text/javascript"></script>
+  <!-- Other scripts -->
+  <script type="text/javascript">
+   Muse.Utils.addSelectorFn('body', Muse.Utils.transformMarkupToFixBrowserProblemsPreInit);/* body */
+Muse.Utils.addSelectorFn('body', Muse.Utils.prepHyperlinks); /* body */
+Muse.Utils.addSelectorFn('body', function() { Muse.Utils.fullPage('#page'); }); /* 100% height page */
+Muse.Utils.addSelectorFn('body', Muse.Utils.showWidgetsWhenReady);/* body */
+Muse.Utils.addSelectorFn('body', Muse.Utils.transformMarkupToFixBrowserProblems);/* body */
+
+</script>
+   </body>
+</html>
