@@ -19,6 +19,14 @@ DATABASES = {
         'PASSWORD': 'codered',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+    },
+    'remote': {
+	'ENGINE': 'django.db.backends.mysql',
+	'NAME': 'dequeuedb',
+	'USER': 'dequeuedb',
+	'PASSWORD': 'Code1@Red',
+	'HOST': '203.124.112.86',
+	'PORT': '3306',
     }
 }
 
@@ -59,7 +67,7 @@ MEDIA_URL = '/film_images/'
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
 
-STATIC_ROOT = os.path.join(SITE_ROOT,'static/')
+STATIC_ROOT = ''
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'

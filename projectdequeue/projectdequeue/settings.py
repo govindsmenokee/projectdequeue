@@ -19,6 +19,14 @@ DATABASES = {
         'PASSWORD': 'codered',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+    },
+    'remote': {
+	'ENGINE': 'django.db.backends.mysql',
+	'NAME': 'dequeuedb',
+	'USER': 'dequeuedb',
+	'PASSWORD': 'Code1@Red',
+	'HOST': '182.50.133.146',
+	'PORT': '',
     }
 }
 

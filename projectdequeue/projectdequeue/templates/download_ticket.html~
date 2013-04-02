@@ -27,14 +27,16 @@
 	<div class="clearfix colelem" id="pu94"><!-- group -->
  		<div class="clearfix grpelem" id="u132-4"><!-- content -->
       		<p><h1><font size="6"><b>{{ film.film_name }}</b></h1></p><br/>
-		<p><h1><font size="3" face="arial" color="RED"><p><b><blink>The transaction is complete. {{ credits }} credits were deducted from your account. You have {{ remain }} credits left in your account.</blink></b></p></h1></p><br/>
-		<p><h1><font size="6" face="arial" color="brown">The show starts at:<p><b>{{ film.show_timing }}</b></p></h1></p>
+{% for field_data_field_credits in testtest %}
+		<p><h1><font size="3" face="arial" color="RED"><p><b>The transaction is complete. {{ credits }} credits were deducted from your account. You have {{ field_data_field_credits.field_credits_value }} credits left in your account.</b></p></h1></p><br/>
+		<p><h1><font size="6" face="arial" color="brown"><marquee>The show starts at:<p><b>{{ film.show_timing }}</b></p></marquee></h1></p>
 		<p><h1><font size="6" face="arial" color="#2c2c2c">IN HALL:<p><b>NO.{{ film.hall_id }}</b></p></h1></p>
      	</div>
+{% endfor %}
 	</div>
 	<div class="clearfix colelem" id="pu94"><!-- group -->
 		<div class="clearfix grpelem" id="u132-4"><!-- content -->
-	   		<font size="5" face="arial" color="brown"><strong><b><i><u>GET YOUR TICKET HERE:</u></i></b></strong></font>
+	   		<font size="5" face="arial" color="brown"><strong><b><i><u><blink>GET YOUR TICKET HERE:</blink></u></i></b></strong></font>
     	 </div>
 	</div>
 	<div class="clearfix colelem" id="pu149"><!-- group -->
