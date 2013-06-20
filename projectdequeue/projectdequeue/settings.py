@@ -24,7 +24,7 @@ DATABASES = {
 	'ENGINE': 'django.db.backends.mysql',
 	'NAME': 'dequeuedb',
 	'USER': 'dequeuedb',
-	'PASSWORD': 'Code1@Red',
+	'PASSWORD': '#Code1',
 	'HOST': '182.50.133.146',
 	'PORT': '',
     }
